@@ -1,0 +1,2 @@
+# Prevent node_modules from being tracked by git
+node_modules/
