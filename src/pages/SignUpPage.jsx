@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -15,6 +16,7 @@ const SignUpPage = () => {
   });
 
   const { signup, isSigningUp } = useAuthStore();
+  const navigate = useNavigate();
 
   const validateForm = () => {
     if (!formData.fullName.trim()) return toast.error("Full name is required");
@@ -26,12 +28,20 @@ const SignUpPage = () => {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const success = validateForm();
 
-    if (success === true) signup(formData);
+    if (success === true) {
+      // signup returns a promise, so we can await it
+      try {
+        await signup(formData);
+        navigate("/profile"); // Redirect to profile after successful signup
+      } catch (error) {
+        // Optionally handle signup error here
+      }
+    }
   };
 
   return (
@@ -139,6 +149,8 @@ const SignUpPage = () => {
               </Link>
             </p>
           </div>
+
+          
         </div>
       </div>
 

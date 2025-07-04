@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Camera, Mail, User } from "lucide-react";
+import SelectContacts from "../components/SelectContacts";
+import { useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {
   const { authUser, isUpdatingProfile, updateProfile } = useAuthStore();
   const [selectedImg, setSelectedImg] = useState(null);
+  // State to show/hide the SelectContacts modal
+  const [showSelectContacts, setShowSelectContacts] = useState(false);
+  const navigate = useNavigate();
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
@@ -96,8 +101,24 @@ const ProfilePage = () => {
               </div>
             </div>
           </div>
+
+          <button
+            className="btn btn-primary w-full mt-4"
+            onClick={() => setShowSelectContacts(true)}
+          >
+            Edit Chat Contacts
+          </button>
         </div>
       </div>
+      {/* Show SelectContacts modal if needed */}
+      {showSelectContacts && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+          <SelectContacts onComplete={() => {
+            setShowSelectContacts(false);
+            navigate("/");
+          }} />
+        </div>
+      )}
     </div>
   );
 };

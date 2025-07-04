@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import SelectContacts from "./components/SelectContacts";
 
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
@@ -9,7 +10,8 @@ import ProfilePage from "./pages/ProfilePage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuthStore } from "./store/useAuthStore";
 import { useThemeStore } from "./store/useThemeStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
@@ -17,14 +19,14 @@ import { Toaster } from "react-hot-toast";
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
   const { theme } = useThemeStore();
-
-  console.log({ onlineUsers });
+  const navigate = useNavigate();
+  // State to show/hide the SelectContacts modal after signup
+  const [showSelectContacts, setShowSelectContacts] = useState(false);
 
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
 
-  console.log({ authUser });
 
   if (isCheckingAuth && !authUser)
     return (
@@ -36,7 +38,12 @@ const App = () => {
   return (
     <div data-theme={theme}>
       <Navbar />
-
+      {/* Show SelectContacts modal if needed */}
+      {showSelectContacts && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+          <SelectContacts onComplete={() => setShowSelectContacts(false)} />
+        </div>
+      )}
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
         <Route path="/signup" element={!authUser ? <SignUpPage /> : <Navigate to="/" />} />
