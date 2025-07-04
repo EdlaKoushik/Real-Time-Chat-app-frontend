@@ -1,8 +1,18 @@
 # React + Vite
+login page
+![image](https://github.com/user-attachments/assets/9a9ef20e-19bf-46fd-b19c-cd5f49dd234b) 
 
-![Screenshot 2025-07-04 223347](https://github.com/user-attachments/assets/b0267816-5e4c-4aa4-96f7-e5c1c9376503)
+profile page
+![image](https://github.com/user-attachments/assets/46c461c7-fac8-4333-8ef5-52d688549c46)
 
-![Screenshot 2025-07-04 223631](https://github.com/user-attachments/assets/a998820a-dca7-4ea7-b403-648e125598e7)
-![Screenshot 2025-07-04 223705](https://github.com/user-attachments/assets/87f101a7-c493-4ce4-a653-55eb25761f7f)
-![Screenshot 2025-07-04 225517](https://github.com/user-attachments/assets/5ba2c17f-725e-4292-9674-8951a6f62750)
-![Screenshot (1597)](https://github.com/user-attachments/assets/9218e0f8-397f-4ee8-b5ad-b16ce1ba80bd)
+home page 
+![image](https://github.com/user-attachments/assets/8f18ddab-508d-4526-af05-cd0cf4e7dee3)
+
+real time chat
+![Screenshot 2025-07-04 225517](https://github.com/user-attachments/assets/91fa5d3d-1781-4ff5-8653-e47a329baaea)
+
+settings page
+![Screenshot (1597)](https://github.com/user-attachments/assets/e2799e2c-5326-4900-9cbc-2c1b5d86f580)
+
+
+
