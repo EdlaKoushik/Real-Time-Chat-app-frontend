@@ -1,8 +1,11 @@
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL;
-export const axiosInstance = axios.create({
-  // baseURL: import.meta.env.MODE === "development" ? "http://localhost:5001/api" : "/api",
+// Ensure the API URL ends with /api for production
+let API_URL = import.meta.env.VITE_API_URL;
+if (API_URL && !API_URL.endsWith("/api")) {
+  API_URL = API_URL.replace(/\/?$/, "/api");
+}
 
-  baseURL:API_URL,
+export const axiosInstance = axios.create({
+  baseURL: API_URL,
   withCredentials: true,
 });
