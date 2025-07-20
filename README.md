@@ -1,6 +1,6 @@
 # Full Stack Real-Time Chat Application
 
-A modern full stack chat app built with **MERN (MongoDB, Express, React, Node.js)** and **Socket.io** for real-time messaging.  
+A full stack chat app built with **MERN (MongoDB, Express, React, Node.js)** and **Socket.io** for real-time messaging.  
 Features authentication, user profiles, contact management, and instant chat with online status.
 
 ---
@@ -30,13 +30,14 @@ Features authentication, user profiles, contact management, and instant chat wit
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](https://github.com/user-attachments/assets/9a9ef20e-19bf-46fd-b19c-cd5f49dd234b)
+
 
 ### Profile Page
-![Profile Page](screenshots/profile.png)
+![Profile Page](https://github.com/user-attachments/assets/46c461c7-fac8-4333-8ef5-52d688549c46)
 
 ### Settings & Theme Selection
-![Settings Page](screenshots/settings.png)
+![Settings Page](https://github.com/user-attachments/assets/e2799e2c-5326-4900-9cbc-2c1b5d86f580)
 
 ### Chat Page (with image sharing)
 ![Chat Page](screenshots/chat1.png)
