@@ -150,7 +150,7 @@ MIT
 
 ## 🙋‍♂️ Author
 
-Made by [Your Name](https://github.com/your-username)
+Made by [koushik](https://github.com/EdlaKoushik)
 
 ---
 
