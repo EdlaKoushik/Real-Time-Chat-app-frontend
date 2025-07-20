@@ -40,8 +40,8 @@ Features authentication, user profiles, contact management, and instant chat wit
 ![Settings Page](https://github.com/user-attachments/assets/e2799e2c-5326-4900-9cbc-2c1b5d86f580)
 
 ### Chat Page (with image sharing)
-![Chat Page](screenshots/chat1.png)
-![Chat Page - Two Users](screenshots/chat2.png)
+![Chat Page](https://github.com/user-attachments/assets/8f18ddab-508d-4526-af05-cd0cf4e7dee3)
+![Chat Page - Two Users](https://github.com/user-attachments/assets/91fa5d3d-1781-4ff5-8653-e47a329baaea)
 ![Chat Page - Alternate View](screenshots/chat3.png)
 
 ---
